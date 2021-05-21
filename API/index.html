@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="main.css">
+    <title>API practice</title>
+    <script src="./app.js" defer></script>
+</head>
+
+<body>
+
+    <main class="content">
+        <h1>API Examples</h1>
+        <section class="country">
+            <h2>Country Info</h2>
+            <form action="#" class="nat-form">
+                <div class="form-info">
+                    <label for="country" class="input__label">Enter a country:</label>
+                    <input type="text" class="input__text" id="country" placeholder="Country">
+                </div>
+                <button type="submit" class="btn btn-country">Get Info</button>
+            </form>
+            <div class="country__info"></div>
+            <div id='map'></div>
+        </section>
+        <section class="nationality">
+            <h2>Guess nationality based on a name</h2>
+            <form action="#" class="nat-form">
+                <div class="form-info">
+                    <label for="name" class="input__label">Enter a name:</label>
+                    <input type="text" class="input__text" id="name" placeholder="Name">
+                </div>
+                <button type="submit" class="btn btn-name">Check</button>
+            </form>
+
+            <div class="nationality__guess">
+
+            </div>
+        </section>
+        <!-- <h2>Top 100 Memes in the last 30 days</h2> -->
+        <section class="meme-cont">
+            <!-- <figure class="meme">
+                <img class="meme__img" src="./yoda.jpeg" alt="#">
+                <figcaption class="meme__title">Yoda</figcaption>
+            </figure>
+            <figure class="meme">
+                <img class="meme__img" src="./yoda.jpeg" alt="#">
+                <figcaption class="meme__title"></figcaption>
+            </figure> -->
+        </section>
+    </main>
+</body>
+
+</html>

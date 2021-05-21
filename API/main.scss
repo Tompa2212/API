@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h2,
+h1 {
+  margin-bottom: 40px;
+}
+
+.paragraph {
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+//COUNTRY API
+.country {
+  padding: 20px;
+
+  #map {
+    max-width: 900px;
+    margin: 30px auto;
+    border-radius: 2px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  /* Zebra striping */
+  tr:nth-of-type(odd) {
+    background: #eee;
+  }
+  th {
+    background: rgb(78, 77, 77);
+    color: white;
+    font-weight: bold;
+  }
+  td,
+  th {
+    padding: 6px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  .table__img {
+    max-width: 100px;
+  }
+
+  @media only screen and (max-width: 760px),
+    (min-device-width: 768px) and (max-device-width: 1024px) {
+    /* Force table to not be like tables anymore */
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+      display: block;
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+
+    tr {
+      border: 1px solid #ccc;
+    }
+
+    td {
+      /* Behave  like a "row" */
+      border: none;
+      border-bottom: 1px solid #eee;
+      position: relative;
+      padding-left: 50%;
+    }
+
+    td:before {
+      /* Now like a table header */
+      position: absolute;
+      /* Top/left values mimic padding */
+      top: 6px;
+      left: 6px;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap;
+      font-weight: bold;
+    }
+
+    /*
+	Label the data
+	*/
+    td:nth-of-type(1):before {
+      content: "Name";
+    }
+    td:nth-of-type(2):before {
+      content: "Flag";
+    }
+    td:nth-of-type(3):before {
+      content: "Capital";
+    }
+    td:nth-of-type(4):before {
+      content: "Currency";
+    }
+    td:nth-of-type(5):before {
+      content: "Population";
+    }
+    td:nth-of-type(6):before {
+      content: "Language";
+    }
+    td:nth-of-type(7):before {
+      content: "Region";
+    }
+  }
+}
+
+//NATIONALITY API
+
+.nationality {
+  margin-bottom: 40px;
+}
+.nat-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.form-info {
+  margin-bottom: 20px;
+  position: relative;
+}
+.input__label {
+  margin-right: 10px;
+  font-size: 18px;
+  position: relative;
+  bottom: -0;
+}
+.input__text {
+  margin-right: 10px;
+  font-size: 16px;
+  border: transparent;
+  border-bottom: 2px solid rgb(4, 97, 4);
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn {
+  background-color: rgb(4, 97, 4);
+  color: white;
+  border: transparent;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+//MEME API
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.meme-cont {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-gap: 2rem;
+}
+
+.meme {
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2px;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__title {
+    font-size: 22px;
+    color: rgb(63, 58, 58);
+    margin-top: 10px;
+  }
+}

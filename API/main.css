@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h2,
+h1 {
+  margin-bottom: 40px;
+}
+
+.paragraph {
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.country {
+  padding: 20px;
+  /* Zebra striping */
+}
+
+.country #map {
+  max-width: 900px;
+  margin: 30px auto;
+  border-radius: 2px;
+}
+
+.country table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.country tr:nth-of-type(odd) {
+  background: #eee;
+}
+
+.country th {
+  background: #4e4d4d;
+  color: white;
+  font-weight: bold;
+}
+
+.country td,
+.country th {
+  padding: 6px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.country .table__img {
+  max-width: 100px;
+}
+
+@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
+  .country {
+    /* Force table to not be like tables anymore */
+    /* Hide table headers (but not display: none;, for accessibility) */
+    /*
+	Label the data
+	*/
+  }
+  .country table,
+  .country thead,
+  .country tbody,
+  .country th,
+  .country td,
+  .country tr {
+    display: block;
+  }
+  .country thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  .country tr {
+    border: 1px solid #ccc;
+  }
+  .country td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+  .country td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+  .country td:nth-of-type(1):before {
+    content: "Name";
+  }
+  .country td:nth-of-type(2):before {
+    content: "Flag";
+  }
+  .country td:nth-of-type(3):before {
+    content: "Capital";
+  }
+  .country td:nth-of-type(4):before {
+    content: "Currency";
+  }
+  .country td:nth-of-type(5):before {
+    content: "Population";
+  }
+  .country td:nth-of-type(6):before {
+    content: "Language";
+  }
+  .country td:nth-of-type(7):before {
+    content: "Region";
+  }
+}
+
+.nationality {
+  margin-bottom: 40px;
+}
+
+.nat-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.form-info {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.input__label {
+  margin-right: 10px;
+  font-size: 18px;
+  position: relative;
+  bottom: -0;
+}
+
+.input__text {
+  margin-right: 10px;
+  font-size: 16px;
+  border: transparent;
+  border-bottom: 2px solid #046104;
+}
+
+.input__text:focus {
+  outline: none;
+}
+
+.btn {
+  background-color: #046104;
+  color: white;
+  border: transparent;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.meme-cont {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: (minmax(240px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-gap: 2rem;
+}
+
+.meme__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 2px;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+
+.meme__img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.meme__title {
+  font-size: 22px;
+  color: #3f3a3a;
+  margin-top: 10px;
+}
+/*# sourceMappingURL=main.css.map */
